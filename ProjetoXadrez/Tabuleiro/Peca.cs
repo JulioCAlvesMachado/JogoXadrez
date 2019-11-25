@@ -15,7 +15,10 @@
             QteMovimentos = 0;
         }
 
-
+        public void IncrementrarQtdMovimento()
+        {
+            QteMovimentos++;
+        }
 
     }
 }
