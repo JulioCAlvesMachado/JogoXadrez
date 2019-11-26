@@ -44,7 +44,7 @@ namespace xadrez
             }
 
             //Direita
-            pos.DefinirValores(Posicao.Linha, Posicao.Coluna - 1);
+            pos.DefinirValores(Posicao.Linha, Posicao.Coluna + 1);
             while (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;
