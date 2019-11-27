@@ -27,9 +27,8 @@ namespace xadrez
             {
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
-                {
                     break;
-                }
+
                 pos.DefinirValores(pos.Linha - 1, pos.Coluna - 1);
             }
 
@@ -39,9 +38,8 @@ namespace xadrez
             {
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
-                {
                     break;
-                }
+
                 pos.DefinirValores(pos.Linha - 1, pos.Coluna + 1);
             }
 
@@ -51,9 +49,8 @@ namespace xadrez
             {
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
-                {
                     break;
-                }
+
                 pos.DefinirValores(pos.Linha + 1, pos.Coluna + 1);
             }
 
@@ -63,9 +60,8 @@ namespace xadrez
             {
                 mat[pos.Linha, pos.Coluna] = true;
                 if (Tab.Peca(pos) != null && Tab.Peca(pos).Cor != Cor)
-                {
                     break;
-                }
+
                 pos.DefinirValores(pos.Linha + 1, pos.Coluna - 1);
             }
 

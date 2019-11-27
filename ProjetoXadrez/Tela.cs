@@ -47,7 +47,7 @@ namespace ProjetoXadrez
         {
             Console.Write("[");
 
-            foreach(Peca x in conjunto)
+            foreach (Peca x in conjunto)
                 Console.Write(x + " ");
 
             Console.Write("]");
@@ -79,13 +79,10 @@ namespace ProjetoXadrez
                 for (int j = 0; j < tab.Colunas; j++)
                 {
                     if (posicoePossiveis[i, j])
-                    {
                         Console.BackgroundColor = fundoAlterado;
-                    }
                     else
-                    {
                         Console.BackgroundColor = fundoOriginal;
-                    }
+
                     ImprimirPeca(tab.Peca(i, j));
                     Console.BackgroundColor = fundoOriginal;
                 }
@@ -108,15 +105,11 @@ namespace ProjetoXadrez
         public static void ImprimirPeca(Peca peca)
         {
             if (peca == null)
-            {
                 Console.Write("- ");
-            }
             else
             {
                 if (peca.Cor == Cor.Branca)
-                {
                     Console.Write(peca);
-                }
                 else
                 {
                     ConsoleColor aux = Console.ForegroundColor;

@@ -23,44 +23,36 @@ namespace xadrez
 
             pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna - 2);
             if (Tab.PosicaoValida(pos) && podeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
             pos.DefinirValores(Posicao.Linha - 2, Posicao.Coluna - 1);
             if (Tab.PosicaoValida(pos) && podeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
             pos.DefinirValores(Posicao.Linha - 2, Posicao.Coluna + 1);
             if (Tab.PosicaoValida(pos) && podeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
             pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna + 2);
             if (Tab.PosicaoValida(pos) && podeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
             pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna + 2);
             if (Tab.PosicaoValida(pos) && podeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
             pos.DefinirValores(Posicao.Linha + 2, Posicao.Coluna + 1);
             if (Tab.PosicaoValida(pos) && podeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
             pos.DefinirValores(Posicao.Linha + 2, Posicao.Coluna - 1);
             if (Tab.PosicaoValida(pos) && podeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
             pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna - 2);
             if (Tab.PosicaoValida(pos) && podeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
 
             return mat;
         }
@@ -69,5 +61,5 @@ namespace xadrez
             return "C";
         }
     }
-    
+
 }

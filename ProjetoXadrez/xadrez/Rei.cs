@@ -4,10 +4,10 @@ namespace xadrez
 {
     class Rei : Peca
     {
-        private PartidaDeXadrez partida;
+        private PartidaDeXadrez Partida;
         public Rei(Tabuleiro tab, Cor cor, PartidaDeXadrez partida) : base(tab, cor)
         {
-            this.partida = partida;
+            Partida = partida;
         }
 
 
@@ -31,61 +31,53 @@ namespace xadrez
             //Acima
             pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
 
             //Nordeste
             pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna + 1);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
 
             //Direita
             pos.DefinirValores(Posicao.Linha, Posicao.Coluna + 1);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
 
             //Sudeste
             pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna + 1);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
 
             //Abaixo
             pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
 
             //Sudoeste
             pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
 
             //Esquerda
             pos.DefinirValores(Posicao.Linha, Posicao.Coluna - 1);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
 
             //Noroeste
             pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna - 1);
             if (Tab.PosicaoValida(pos) && PodeMover(pos))
-            {
                 mat[pos.Linha, pos.Coluna] = true;
-            }
+
 
             //#JogadaEspecial Roque
-            if (QteMovimentos == 0 && !partida.Xeque)
+            if (QteMovimentos == 0 && !Partida.Xeque)
             {
                 //Roque Pequeno
                 Posicao posT1 = new Posicao(Posicao.Linha, Posicao.Coluna + 3);
